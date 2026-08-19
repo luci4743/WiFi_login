@@ -11,7 +11,7 @@ username="username"
 password="password"
 
 driver=webdriver.Firefox(service=geckopath)
-# time.sleep(1)
+time.sleep(1)
 
 def check_which_wifi_to_connect_to():
     wifi_list=str(subprocess.run("netsh wlan show networks",check=False,capture_output=True,text=True))
@@ -47,8 +47,3 @@ driver.quit()
 
 
 
-# print(subprocess.run("netsh wlan show"))
-# driver.get("https://amazon.com")
-# time.sleep(6)
-# cli=driver.find_element(By.ID,"twotabsearchtextbox")
-# cli.send_keys("shoes")
